@@ -1,0 +1,107 @@
+:root {
+  --base-white: #FFFFFF;
+  --base-light-gray: #F5F5F5;
+  --base-gray: #DCDCDC;
+  --base-dark-gray: #999999;
+  --base-black: #000000;
+
+  --accent-yellow: #FFD700;
+  --accent-orange: #FF8C00;
+  --accent-red: #FF0000;
+
+  --etch-a-sketch-gray: #C7C7C7;
+}
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--base-dark-gray);
+  background-color: var(--base-white);
+
+}
+
+#container {
+  /* max-width: 1440px; */
+  min-width: 780px;
+  margin: 0 auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#main-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--base-light-gray);
+  border-bottom: 3px solid var(--base-dark-gray);
+}
+
+.game-title {
+  position: inherit;
+  font-size: 4.2rem;
+  font-weight: 700;
+  margin: 0 0 0 53px;
+  color: var(--accent-orange);
+}
+
+
+#game-container {
+  width: 100%;
+  height: 90vh;
+  background-color: var(--base-light-gray);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.etch-a-sketch-controls {
+  order: 1;
+  height: 100%;
+  width: 25%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--accent-orange);
+  border-right: 3px solid var(--base-dark-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.etch-a-sketch-clear-btn {
+  width: 70%;
+  height: 10%;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  font-size: 3rem;
+  font-weight: 500;
+  border: 3px solid var(--base-dark-gray);
+  color: var(--base-dark-gray);
+  background-color: var(--base-light-gray);
+}
+
+.etch-a-sketch-clear-btn:hover {
+  background-color: #FFD700;
+
+}
+.grid-window {
+  order: 2;
+  height: 93%;
+  width: 75%;
+  background-color: var(--base-white);
+  border: 2px solid var(--accent-orange);
+  margin: 0 30px;
+}
