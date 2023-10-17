@@ -104,21 +104,23 @@ body {
   -webkit-text-stroke: #b45151;
 
 }
+
 #grid-container {
   order: 2;
-  display: inline-grid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 90%;
   background-color: var(--base-white);
   border: 2px solid var(--accent-orange);
   margin: 0 30px;
   cursor: crosshair;
 }
 
-
-.medium-grid {
-  grid-template-columns: repeat(44, auto);
+.grid-container > div {
+  flex: 1 0 auto;
+  height: auto;
 }
 
-.medium-grid > div {
-  height: 19px;
-  width: 19px;
-}
