@@ -2,12 +2,12 @@
   --base-white: #FFFFFF;
   --base-light-gray: #F5F5F5;
   --base-gray: #DCDCDC;
-  --base-dark-gray: #999999;
+  --base-dark-gray: #161616;
   --base-black: #000000;
 
   --accent-yellow: #FFD700;
-  --accent-orange: #FF8C00;
-  --accent-red: #FF0000;
+  --accent-orange: #242424;
+  --accent-red: #b45151;
 
   --etch-a-sketch-gray: #C7C7C7;
 }
@@ -43,7 +43,7 @@ body {
   align-items: center;
   width: 100%;
   height: 10vh;
-  background-color: var(--base-light-gray);
+  background-color: var(--base-dark-gray);
   border-bottom: 3px solid var(--base-dark-gray);
 }
 
@@ -53,13 +53,17 @@ body {
   font-weight: 700;
   margin: 0 0 0 53px;
   color: var(--accent-orange);
+  -webkit-text-stroke: #b45151;
+  -webkit-text-stroke-width: 2px;
+  
+  letter-spacing: 0.7rem;
 }
 
 
 #game-container {
   width: 100%;
   height: 90vh;
-  background-color: var(--base-light-gray);
+  background-color: var(--accent-orange);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -87,21 +91,34 @@ body {
   border-radius: 4px;
   margin-bottom: 30px;
   font-size: 3rem;
-  font-weight: 500;
-  border: 3px solid var(--base-dark-gray);
-  color: var(--base-dark-gray);
-  background-color: var(--base-light-gray);
+  font-weight: 700;
+  border: 3px solid var(--accent-red);
+  color: var(--accent-red);
+  background-color: var(--accent-orange);
+
 }
 
 .etch-a-sketch-clear-btn:hover {
-  background-color: #FFD700;
+  background-color: var(--accent-red);
+  color: var(--accent-orange);
+  -webkit-text-stroke: #b45151;
 
 }
-.grid-window {
+#grid-container {
   order: 2;
-  height: 93%;
-  width: 75%;
+  display: inline-grid;
   background-color: var(--base-white);
   border: 2px solid var(--accent-orange);
   margin: 0 30px;
+  cursor: crosshair;
+}
+
+
+.medium-grid {
+  grid-template-columns: repeat(44, auto);
+}
+
+.medium-grid > div {
+  height: 19px;
+  width: 19px;
 }
