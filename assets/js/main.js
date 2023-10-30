@@ -18,7 +18,7 @@ function createGrid(size) {
   }
 };
 
-createGrid(64);
+createGrid(32);
 
 
 clearBtn.addEventListener('click', function () {
