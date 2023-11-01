@@ -49,9 +49,9 @@ body {
   font-size: 3rem;
   font-weight: 700;
   margin: 0 0 0 65px;
-  color: var(--accent-orange);
-  -webkit-text-stroke: #b45151;
-  -webkit-text-stroke-width: 2px;
+  color: var(--accent-red);
+  /* -webkit-text-stroke: #b45151; */
+  /* -webkit-text-stroke-width: px; */
 
   letter-spacing: 0.7rem;
 }
@@ -85,16 +85,20 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-top: -74px;
 }
 
 .ctrl-btns {
   width: 70%;
   height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
   margin-bottom: 50px;
-  font-size: 3rem;
+  padding: 12px 26px;
+  font-size:2rem;
   font-weight: 700;
   border: 6px solid var(--accent-red);
   color: var(--accent-red);
@@ -114,8 +118,8 @@ body {
 #grid-container {
   order: 2;
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(64, 1fr);
+  grid-template-rows: repeat(64, 1fr);
   width: 700px;
   height: 700px;
   overflow: none;
@@ -126,8 +130,29 @@ body {
   z-index: 2;
 }
 
-.row,
-.columns {
-  /* width: 99%; */
-  height: 39.8px;
+.grid-row {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.small-grid-cell {
+  width: 43.8px;
+  height: 43.8px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+.medium-grid-cell {
+  width: 21.9px;
+  height: 21.9px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+.large-grid-cell {
+  width: 10.96px;
+  height: 10.96px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
 }

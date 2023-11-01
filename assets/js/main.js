@@ -1,48 +1,83 @@
 const clearBtn = document.querySelector('#clear');
 const smallGrid = document.querySelector('#small-grid');
 const mediumGrid = document.querySelector('#medium-grid');
-let grid = document.querySelector('#grid-container');
+const largeGrid = document.querySelector('#large-grid');
+let gridContainer = document.querySelector('#grid-container');
 // const gameContainerWindow = document.querySelector('#grid-container');
 
-function createGrid(rows, columns) {
+function createSmallGrid(rows, columns) {
   
-  grid.textContent = "";
+  gridContainer.textContent = "";
 
-  for (let i = 0; i < columns; i++) {
-    let column = document.createElement('div');
-    column.classList.add('column');
+  for (let i = 0; i < rows; i++) {
+    const row = document.createElement('div');
+    row.classList.add('grid-row');
     // column.style.border = '2px solid black'; // Added a double border to divs
-    for (let j = 0; j < rows; j++) {
-      let row = document.createElement('div');
-      row.classList.add('row');
-      row.style.border = '2px solid black';
-      // row.innerText = 'CRTAJ...BOLI ME KURAC DJE'; // Made divs not fit container properly
-      column.appendChild(row);
+    for (let j = 0; j < columns; j++) {
+      const cell = document.createElement('div');
+      cell.classList.add('small-grid-cell');
+      row.appendChild(cell);
     }
-    grid.appendChild(column);
+    gridContainer.appendChild(row);
+  }
+};
+
+function createMediumGrid(rows, columns) {
+  
+  gridContainer.textContent = "";
+
+  for (let i = 0; i < rows; i++) {
+    const row = document.createElement('div');
+    row.classList.add('grid-row');
+    // column.style.border = '2px solid black'; // Added a double border to divs
+    for (let j = 0; j < columns; j++) {
+      const cell = document.createElement('div');
+      cell.classList.add('medium-grid-cell');
+      row.appendChild(cell);
+    }
+    gridContainer.appendChild(row);
+  }
+};
+
+function createLargeGrid(rows, columns) {
+  
+  gridContainer.textContent = "";
+
+  for (let i = 0; i < rows; i++) {
+    const row = document.createElement('div');
+    row.classList.add('grid-row');
+    // column.style.border = '2px solid black'; // Added a double border to divs
+    for (let j = 0; j < columns; j++) {
+      const cell = document.createElement('div');
+      cell.classList.add('large-grid-cell');
+      row.appendChild(cell);
+    }
+    gridContainer.appendChild(row);
   }
 };
 
 
 
+
+
+
+
+
 smallGrid.addEventListener('click', function () {
-  createGrid(16, 16);
-  row.style.height = "39.8%";
-  column.style.height = "39.8%";
+  // cell.classList.add('small-grid-cell');
+  createSmallGrid(16, 16);
+
 });
-
-console.log(smallGrid);
-
 
 mediumGrid.addEventListener('click', function () {
-  createGrid(32);
-  grid.style.gridTemplateColumns = "32, 1fr";
-  grid.style.gridTemplateRows = "32, 1fr";
+  createMediumGrid(32, 32);
 });
 
-console.log(mediumGrid);
+largeGrid.addEventListener('click', function () {
+  createLargeGrid(64, 64);
+});
 
 
 clearBtn.addEventListener('click', function () {
-  grid.innerHTML = "";
+  gridContainer.innerHTML = "";
 });
