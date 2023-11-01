@@ -129,7 +129,8 @@ body {
   border: 6px solid var(--accent-red);
   margin: 0 0 0 30px;
   cursor: crosshair;
-  z-index: 2;
+  z-index: 1;
+  /* pointer-events: none; */
 }
 
 .grid-row {
@@ -157,4 +158,8 @@ body {
   height: 10.96px;
   border: 1px solid #000000;
   box-sizing: border-box;
+}
+
+.box {
+  border: 1px solid #000000;
 }

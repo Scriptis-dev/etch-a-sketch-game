@@ -5,56 +5,52 @@ const largeGrid = document.querySelector('#large-grid');
 let gridContainer = document.querySelector('#grid-container');
 // const gameContainerWindow = document.querySelector('#grid-container');
 
-function createSmallGrid(rows, columns) {
+// function createSmallGrid(rows, columns) {
+  
+//   gridContainer.textContent = "";
+
+//   for (let i = 0; i < rows; i++) {
+//     const row = document.createElement('div');
+//     row.classList.add('grid-row');
+//     // column.style.border = '2px solid black'; // Added a double border to divs
+//     for (let j = 0; j < columns; j++) {
+//       const cell = document.createElement('div');
+//       cell.classList.add('small-grid-cell', 'cell');
+//       row.appendChild(cell);
+//     }
+//     gridContainer.appendChild(row);
+//   }
+// };
+
+// function createMediumGrid(rows, columns) {
+  
+//   gridContainer.textContent = "";
+
+//   for (let i = 0; i < rows; i++) {
+//     const row = document.createElement('div');
+//     row.classList.add('grid-row');
+//     // column.style.border = '2px solid black'; // Added a double border to divs
+//     for (let j = 0; j < columns; j++) {
+//       const cell = document.createElement('div');
+//       cell.classList.add('medium-grid-cell', 'cell');
+//       row.appendChild(cell);
+//     }
+//     gridContainer.appendChild(row);
+//   }
+// };
+
+function createLargeGrid() {
   
   gridContainer.textContent = "";
 
-  for (let i = 0; i < rows; i++) {
-    const row = document.createElement('div');
-    row.classList.add('grid-row');
-    // column.style.border = '2px solid black'; // Added a double border to divs
-    for (let j = 0; j < columns; j++) {
-      const cell = document.createElement('div');
-      cell.classList.add('small-grid-cell');
-      row.appendChild(cell);
-    }
-    gridContainer.appendChild(row);
+  for (i = 0; i < 64 * 64; i++) {
+    let cell =  document.createElement('div');
+    gridContainer.appendChild(cell);
+    cell.classList.add('box');
   }
 };
 
-function createMediumGrid(rows, columns) {
-  
-  gridContainer.textContent = "";
 
-  for (let i = 0; i < rows; i++) {
-    const row = document.createElement('div');
-    row.classList.add('grid-row');
-    // column.style.border = '2px solid black'; // Added a double border to divs
-    for (let j = 0; j < columns; j++) {
-      const cell = document.createElement('div');
-      cell.classList.add('medium-grid-cell');
-      row.appendChild(cell);
-    }
-    gridContainer.appendChild(row);
-  }
-};
-
-function createLargeGrid(rows, columns) {
-  
-  gridContainer.textContent = "";
-
-  for (let i = 0; i < rows; i++) {
-    const row = document.createElement('div');
-    row.classList.add('grid-row');
-    // column.style.border = '2px solid black'; // Added a double border to divs
-    for (let j = 0; j < columns; j++) {
-      const cell = document.createElement('div');
-      cell.classList.add('large-grid-cell');
-      row.appendChild(cell);
-    }
-    gridContainer.appendChild(row);
-  }
-};
 
 
 
@@ -81,3 +77,13 @@ largeGrid.addEventListener('click', function () {
 clearBtn.addEventListener('click', function () {
   gridContainer.innerHTML = "";
 });
+
+
+gridContainer.addEventListener('mouseover', (e) => {
+  if (e.target.innerHTML === "") {
+    e.target.style.backgroundColor = "#000000";
+  }
+  // else {
+  //   return;
+  }
+);
