@@ -39,9 +39,9 @@ body {
   align-items: center;
   width: 100%;
   height: 7vh;
-  margin-bottom: 50px;
+  /* margin-bottom: 20px; */
   background-color: var(--base-dark-gray);
-  border-bottom: 3px solid var(--base-dark-gray);
+  border-bottom: 6px solid var(--accent-red);
 }
 
 .game-title {
@@ -58,49 +58,50 @@ body {
 
 #game-container {
   width: 100%;
-  height: 90vh;
+  height: 100%;
   background-color: var(--accent-orange);
   display: flex;
-  justify-content: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .etch-a-sketch-controls {
   order: 1;
   height: 100%;
-  width: 25%;
+  width: 100%;
   margin: 0;
   padding: 0;
   background-color: var(--accent-orange);
   /* border-right: 3px solid var(--base-dark-gray); */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .size-btns-container {
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 80px;
+  background-color: var(--base-dark-gray);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: -74px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .ctrl-btns {
-  width: 70%;
-  height: 10%;
+  width: 10%;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  margin-bottom: 50px;
-  padding: 12px 26px;
-  font-size:2rem;
-  font-weight: 700;
-  border: 6px solid var(--accent-red);
+  padding: 8px 12px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: 3px solid var(--accent-red);
   color: var(--accent-red);
   background-color: var(--accent-orange);
 }
@@ -112,7 +113,8 @@ body {
 }
 
 .clear-btn {
-  margin-bottom: 128px;
+  /* margin-bottom: 128px; */
+  
 }
 
 #grid-container {
@@ -125,7 +127,7 @@ body {
   overflow: none;
   background-color: var(--base-white);
   border: 6px solid var(--accent-red);
-  margin: 0 0 0 300px;
+  margin: 0 0 0 30px;
   cursor: crosshair;
   z-index: 2;
 }
