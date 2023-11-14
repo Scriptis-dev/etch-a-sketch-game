@@ -12,21 +12,22 @@
   <title>Etch-a-Sketch</title>
 </head>
 <body>
-  <div id="container">
-    <header id="main-header">
-      <h1 class="game-title">ETCH-A-SKETCH</h1>
-    </header>
-    <main id="game-container">
-      <div class="grid-window" id="grid-container"></div>
-      <div class="etch-a-sketch-controls">
-        <div class="size-btns-container">
-          <button class="small-grid size-btn ctrl-btns" id="small-grid">SMALL</button>
-          <button class="med-grid size-btn ctrl-btns" id="medium-grid">MEDIUM</button>
-          <button class="large-grid size-btn ctrl-btns" id="large-grid">BIG</button>
-          <button class="clear-btn ctrl-btns" id="clear">CLEAR</button>
-        </div>
+  <div class="flex-container">
+    <div class="game-title">
+      <h1 class="game-title-text">ETCH-A-SKETCH</h1>
+    </div>
+    <div class="game-content">
+      <div class="game-grid"></div>
+      <div class="game-buttons">
+        <button class="-btn">BLACK</button>
+        <button class="-btn">WHITE</button>
+        <button class="-btn">CLEAR</button>
       </div>
-    </main>
+      <div class="board-size-container">
+        <input type="text" placeholder="SIZE OF GRID" value="16">
+        <button>SET SIZE</button>
+      </div>
+    </div>
   </div>
 </body>
 </html>
